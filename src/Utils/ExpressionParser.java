@@ -18,8 +18,8 @@ public class ExpressionParser {
      */
     public static Expression parseExpression(String expression) throws InvalidVariableException {
         String infixExpression = InfixToPrefixConv.infixToPrefix(expression);
-        Queue<Expression> expressionStack = createExpressionQueue(infixExpression);
-        return mergeExpressions(expressionStack);
+        Queue<Expression> expressionQueue = createExpressionQueue(infixExpression);
+        return mergeExpressions(expressionQueue);
 
     }
 

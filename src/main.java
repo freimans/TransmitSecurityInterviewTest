@@ -6,11 +6,14 @@ import Utils.ExpressionParser;
 
 public class main {
     public static void main(String[] args) throws InvalidVariableException, UnassignedValueException {
-        Expression exp = ExpressionParser.parseExpression("-x^7+x^5-3*x^2-x/0");
+        // Enter your function here
+        Expression exp = ExpressionParser.parseExpression("x^2+5*x+6+y");
+        // Assign value to variable
         exp.assignVarValue(VariableEnum.X, 3);
+        exp.assignVarValue(VariableEnum.Y, 6);
         System.out.println(exp.evaluate());
-        exp = exp.derivative();
-        System.out.println(exp);
-        System.out.println(exp.evaluate());
+//        Expression derExp = exp.derivative();
+//        System.out.println(derExp);
+//        System.out.println(derExp.evaluate());
     }
 }
