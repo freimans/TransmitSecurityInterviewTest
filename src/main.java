@@ -12,8 +12,8 @@ public class main {
         exp.assignVarValue(VariableEnum.X, 3);
         exp.assignVarValue(VariableEnum.Y, 6);
         System.out.println(exp.evaluate());
-//        Expression derExp = exp.derivative();
-//        System.out.println(derExp);
-//        System.out.println(derExp.evaluate());
+        Expression derExp = exp.derivative();
+        System.out.println(derExp);
+        System.out.println(derExp.evaluate());
     }
 }
